@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>FaceletTitle</title>
+        <style>               
+            .image{background-image:url("/JsfDersler/resources/image.jpg");}        
+        </style>  
+    </h:head>
+    <h:body  styleClass="image">
+        <h:form>
+            <table align="center" style="margin-top: 100px" cellpadding="7" border="10">
+                <tr>
+                    <td><h:outputText value="Kullanıcı Adi"></h:outputText></td>                  
+                    <td><h:inputText value="#{uyeKayitBean.kullaniciAdi}"></h:inputText></td>    
+                </tr>
+                <tr>
+                    <td><h:outputText value="Parola"></h:outputText></td>                  
+                    <td><h:inputSecret value="#{uyeKayitBean.parola}"></h:inputSecret></td>    
+                </tr>
+
+                <tr>
+                    <td><h:outputText value="Mail"></h:outputText></td>                  
+                    <td><h:inputText value="#{uyeKayitBean.mail}"></h:inputText></td>    
+                </tr>
+
+                <tr>
+                    <td><h:outputText value="Cinsiyet"></h:outputText></td>                  
+                    <td><h:selectOneRadio value="#{uyeKayitBean.cinsiyet}">
+                            <f:selectItem itemValue="Erkek" itemLabel="ERKEK"></f:selectItem> 
+                            <f:selectItem itemValue="Kadın" itemLabel="KADIN"></f:selectItem> 
+                        </h:selectOneRadio></td>    
+                </tr>
+<!--                <tr>
+                    <td><h:outputText value="Meslek"></h:outputText></td>                  
+                    <td><h:selectManyMenu value="#{uyeKayitBean.meslek}" style="width:170px ">
+                            <f:selectItem itemValue="BilM." itemLabel="Bilgisayar M."></f:selectItem> 
+                            <f:selectItem itemValue="MakM." itemLabel="Makina M"></f:selectItem> 
+                            <f:selectItem itemValue="ElekM." itemLabel="Elektirik M"></f:selectItem> 
+                        </h:selectManyMenu>
+                    </td>    
+                </tr>-->
+                <tr>
+                    <td valign="top"><h:outputText value="Adres"></h:outputText></td>                  
+                    <td><h:inputTextarea value="#{uyeKayitBean.adres}" rows="5" cols="21"></h:inputTextarea></td>    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right">
+                        <h:commandButton value="Kayıt" action="#{uyeKayitBean.yazdir()}"></h:commandButton>
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td>
+                        <h:graphicImage library="resources" name="image.jpg" width="100px" height="100px"></h:graphicImage>
+                    </td>
+                </tr>-->
+<!--                <tr>
+                        <td>
+                            <h:selectOneListbox>
+                                <f:selectItem itemValue="BilM." itemLabel="Bilgisayar M."></f:selectItem> 
+                                <f:selectItem itemValue="MakM." itemLabel="Makina M"></f:selectItem> 
+                                <f:selectItem itemValue="ElekM." itemLabel="Elektirik M"></f:selectItem>                         
+                            </h:selectOneListbox>   
+                        </td>
+                    </tr>-->
+            </table>
+        </h:form>
+    </h:body>
+</html>
+
