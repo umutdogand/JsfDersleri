@@ -31,17 +31,17 @@
                     <td><h:selectOneRadio value="#{uyeKayitBean.cinsiyet}">
                             <f:selectItem itemValue="Erkek" itemLabel="ERKEK"></f:selectItem> 
                             <f:selectItem itemValue="Kadın" itemLabel="KADIN"></f:selectItem> 
-                        </h:selectOneRadio></td>    
+                       </h:selectOneRadio></td>    
                 </tr>
-<!--                <tr>
+                <tr>
                     <td><h:outputText value="Meslek"></h:outputText></td>                  
-                    <td><h:selectManyMenu value="#{uyeKayitBean.meslek}" style="width:170px ">
+                    <td><h:selectOneMenu value="#{uyeKayitBean.meslek}" style="width:170px ">
                             <f:selectItem itemValue="BilM." itemLabel="Bilgisayar M."></f:selectItem> 
                             <f:selectItem itemValue="MakM." itemLabel="Makina M"></f:selectItem> 
                             <f:selectItem itemValue="ElekM." itemLabel="Elektirik M"></f:selectItem> 
-                        </h:selectManyMenu>
+                        </h:selectOneMenu>
                     </td>    
-                </tr>-->
+                </tr>
                 <tr>
                     <td valign="top"><h:outputText value="Adres"></h:outputText></td>                  
                     <td><h:inputTextarea value="#{uyeKayitBean.adres}" rows="5" cols="21"></h:inputTextarea></td>    
