@@ -14,7 +14,9 @@
             <table align="center" style="margin-top: 100px" cellpadding="7" border="10">
                 <tr>
                     <td><h:outputText value="Kullanıcı Adi"></h:outputText></td>                  
-                    <td><h:inputText value="#{uyeKayitBean.kullaniciAdi}"></h:inputText></td>    
+                    <td><h:inputText value="#{uyeKayitBean.kullaniciAdi}" validatorMessage="Boş bırakılamaz" >
+                            <f:validateLength maximum="12" ></f:validateLength>
+                        </h:inputText></td>    
                 </tr>
                 <tr>
                     <td><h:outputText value="Parola"></h:outputText></td>                  
@@ -23,9 +25,10 @@
 
                 <tr>
                     <td><h:outputText value="Mail"></h:outputText></td>                  
-                    <td><h:inputText value="#{uyeKayitBean.mail}"></h:inputText></td>    
+                    <td><h:inputText value="#{uyeKayitBean.mail}" id="stringa">
+                            <f:validator validatorId="a"></f:validator></h:inputText></td>    
                 </tr>
-
+                <h:message style="color:red" for="stringa"></h:message>
                 <tr>
                     <td><h:outputText value="Cinsiyet"></h:outputText></td>                  
                     <td><h:selectOneRadio value="#{uyeKayitBean.cinsiyet}">

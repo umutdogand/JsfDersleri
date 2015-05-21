@@ -16,6 +16,7 @@ public class uyeKayitBean {
     private String meslek;
     private String adres;
     private String ehliyet;
+   private String kontrol;
     
     public String yazdir(){
         if(getCinsiyet().equals("Erkek"))
@@ -79,6 +80,14 @@ public class uyeKayitBean {
 
     public void setEhliyet(String ehliyet) {
         this.ehliyet = ehliyet;
+    }
+
+    public String getKontrol() {
+        return kontrol;
+    }
+
+    public void setKontrol(String kontrol) {
+        this.kontrol = kontrol;
     }
     
 }
